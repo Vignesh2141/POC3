@@ -1,0 +1,66 @@
+
+<!------ Include the above in your HEAD tag ---------->
+<div style="text-align: center">
+    <h1>{{msg}}</h1>
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <form>
+                <fieldset>
+                    <legend class="text-center">Valid information is required to register. <span class="req"><small>
+                                required *</small></span></legend>
+
+                    <div class="form-group">
+                        <label for="Name"><span class="req">* </span> fname:  </label>
+                        <input required type="text" [(ngModel)]="user.fname" name="fname" id="fname"
+                            class="form-control phone" maxlength="28" placeholder="Enter your firstname..." />
+                    </div>
+
+                    <div class="form-group">
+                        <label for="firstname"><span class="req">* </span> surname: </label>
+                        <input class="form-control" type="text" [(ngModel)]="user.surname" name="surname" id="surname" required
+                            placeholder="Enter Surname" />
+                        <div id="errFirst"></div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="lastname"><span class="req">* </span> dob : </label>
+                        <input class="form-control" type="date" [(ngModel)]="user.dob" name="dob" id="dob"
+                            placeholder="Total year of experience" required />
+                        <div id="errLast"></div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email"><span class="req">* </span> joiningdate: </label>
+                        <input class="form-control" required type="date" [(ngModel)]="user.joiningDate" name="joiningDate"
+                            id="email" placeholder="" />
+                        <div class="status" id="status"></div>
+                    </div>
+                   
+                    
+                    <div class="form-group">
+                        <label for="email"><span class="req">* </span> mobileNo: </label>
+                        <input class="form-control" required type="text" [(ngModel)]="user.mobileNo" name="mobileNo"
+                            id="email" placeholder="Enter 10 digit mobile number" />
+                        <div class="status" id="status"></div>
+                    </div>
+                    <div class="form-group">
+                        <label for="email"><span class="req">* </span> pincode: </label>
+                        <input class="form-control" required type="text" [(ngModel)]="user.pincode" name="pincode"
+                            id="email" placeholder="Enter 6 digit pin code" />
+                        <div class="status" id="status"></div>
+                    </div>
+                    <div class="form-group">
+                        <input class="btn btn-success" type="submit" name="submit_reg" value="Register" (click)="registerNow()" [routerLink]="['/display']">
+                    </div>
+                </fieldset>
+            </form><!-- ends register form -->
+            <!-- second for to fiter user-->
+        </div><!-- ends col-6 -->
+
+    </div>
+</div>
+
+

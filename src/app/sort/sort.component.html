@@ -1,0 +1,45 @@
+<div class="container">
+    <div class="row">
+               <div id="custom-search-input">
+                                <div class="input-group col-md-12" style="text-align: center">
+                                    <input type="text" class="search-query form-control" placeholder="Enter field name to sort"  name="field" [(ngModel)]="field"/>
+                                    <span class="input-group-btn">
+                                        <button class="btn btn-danger" type="button" (click)="Sort()">
+                                            <span class=" glyphicon glyphicon-filter"></span>
+                                        </button>
+                                    </span>
+                                </div>
+                            </div>
+    </div>
+    </div>
+
+
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Fname</th>
+                <th>Lname</th>
+                <th>Dob</th>
+                <th>Doj</th>
+                <th>mob</th>
+                <th>pincode</th>
+               
+    
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let user of users">
+                <td>{{user.id}}</td>
+                <td>{{user.fname}}</td>
+                <td>{{user.surname}}</td>
+                <td>{{user.dob}}</td>
+                <td>{{user.joiningDate}}</td>
+                <td>{{user.mobileNo}}</td>
+                <td>{{user.pincode}}</td>
+                
+    
+            </tr>
+        </tbody>
+    </table>
+    

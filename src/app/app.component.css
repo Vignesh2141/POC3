@@ -1,0 +1,16 @@
+nav ul li{
+    display: inline-block;
+    margin: 10px;
+}
+nav{
+    background-color: black;
+
+}
+
+nav ul li a{
+    text-decoration: none;
+    color: white;
+}
+nav ul li:hover{
+    background-color: brown;
+}

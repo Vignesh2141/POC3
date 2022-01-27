@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+</head>
+<body>
+<table class="table table-striped">
+    <thead>
+        <th >Id</th>
+            <th >Fname</th>
+            <th >Lname</th>
+            <th >Dob</th>
+            <th >Doj</th>
+            <th >mob</th>
+            <th >pincode</th>
+            
+            <th>Action</th>
+            </thead>
+            <tbody>
+<tr *ngFor="let user of users ">
+            <td>{{user.id}}</td>
+            <td>{{user.fname}}</td>
+            <td>{{user.surname}}</td>
+            <td>{{user.dob}}</td>
+            <td>{{user.joiningDate}}</td>
+            <td>{{user.mobileNo}}</td>
+            <td>{{user.pincode}}</td>
+          
+           <td> <button class="btn btn-danger btn-xs" (click)="deleteUser(user.id)"><span class="glyphicon glyphicon-remove"></span> Delete</button>
+            <button class="btn btn btn-xs" ><span class="glyphicon glyphicon-pencil"></span><a [routerLink]="['/update',user.id]"> Update</a></button></td>
+
+        </tr>
+    </tbody>
+</table>
+<hr>
+
+
+
+
+
+
+</body>
+</html>
